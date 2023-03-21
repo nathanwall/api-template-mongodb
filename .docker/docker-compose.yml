@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  demo-api:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: ..
+    ports:
+      - 8080:8080
+    environment:
+      MONGOHOST: mongo
+      MONGOPORT: 27017
+    command: uvicorn api:app --reload --host 0.0.0.0 --port 8080 --log-level=warning
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017

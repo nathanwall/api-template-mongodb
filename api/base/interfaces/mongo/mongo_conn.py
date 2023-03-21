@@ -12,8 +12,8 @@ class MongoSettings():
     password: str = os.getenv('MONGOPASS')
     uri: str = "mongodb://{}:{}@{}:{}".format(username, password, host, port) \
         if username else "mongodb://{}:{}".format(host, port)
-    database: str = "alpha_api"
-    ip_collection: str = "ip"
+    database: str = "demo_api"
+    demo_collection: str = "demo"
 
 
 class Database(MongoClient):
@@ -28,4 +28,4 @@ class Database(MongoClient):
 
     def __init__(self, *args, **kwargs):
         super().__init__(MongoSettings.uri, *args, **kwargs)
-        self.ip_collection = self[MongoSettings.database][MongoSettings.ip_collection]
+        self.demo_collection = self[MongoSettings.database][MongoSettings.demo_collection]
