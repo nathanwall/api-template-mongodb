@@ -1,6 +1,5 @@
-version: "3.7"
 services:
-  demo-api:
+  template-api:
     build:
       dockerfile: .docker/Dockerfile
       context: ..

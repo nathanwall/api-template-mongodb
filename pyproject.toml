@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "narwhal"
+name = "api-template-mongodb"
 version = "0.1.0"
 description = "FastAPI/MongoDB template"
 authors = ["Nathan Wall <me@nathanwall.co.uk>"]

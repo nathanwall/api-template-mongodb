@@ -1,4 +1,4 @@
-# narwhal
+# API Template MongoDB
 
 by Nathan Wall
 
@@ -15,7 +15,7 @@ From root folder of project: <br/>
 
 ### Docker
 From root folder of project: <br/>
-`docker build --no-cache -t narwhal -f .docker/Dockerfile .`<br/>
+`docker build --no-cache -t api_template_mongodb -f .docker/Dockerfile .`<br/>
 
 ## Execution
 
@@ -23,7 +23,7 @@ From root folder of project: <br/>
 `uvicorn api:app --host 0.0.0.0 --port 8080`<br/>
 
 ### Docker
-`docker run -it --rm -p 8080:8080 -e SERVER_HOST=0.0.0.0 -e SERVER_PORT=8080 --name narwhal narwhal:latest`<br/>
+`docker run -it --rm -p 8080:8080 -e SERVER_HOST=0.0.0.0 -e SERVER_PORT=8080 --name api_template_mongodb api_template_mongodb:latest`<br/>
 
 ## API Documentation
 

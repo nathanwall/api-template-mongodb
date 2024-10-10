@@ -1,11 +1,12 @@
 import os
 from fastapi import FastAPI
-from api.base.endpoints import root, demo_api
+from api.base.endpoints import root, template_api
 
 app = FastAPI(
-    title=os.getenv("FASTAPI_TITLE", "Narwhal"),
-    description=os.getenv("FASTAPI_DESC", "Narwhal"),
-    version=os.getenv("VERSION", "DEVELOPMENT"))
+    title=os.getenv("FASTAPI_TITLE", "API Template"),
+    description=os.getenv("FASTAPI_DESC", "API Template for MongoDB"),
+    version=os.getenv("VERSION", "DEVELOPMENT"),
+)
 
 app.include_router(root.router)
-app.include_router(demo_api.router)
+app.include_router(template_api.router)
